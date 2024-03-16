@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctype|wedyos</title>
+
+</head>
+<body>
+      <h2 class="style">Doctype|wedyos
+</h2>
+   <fieldset>
+<div class="clock">
+    <div id="time"></div>
+</div>
+</div>
+ </fieldset>
+
+<style>
+.clock {
+    font-size: 48px;
+    text-align: center;
+    margin-top:30px;
+    color:rgb(99,25,653);
+     padding:20px;
+}
+ fieldset {
+   margin:60px 0px 0px 0px;
+   padding:6px;
+   padding-top:8px;
+ }
+  h2 {
+    color:#FF0000;
+    text-align:center;
+    margin:3px 2px 0px 2px;
+    padding:0px 0px 30px 8px;
+  }
+   body {
+     background:3px rgb(300,49,288);
+       color:#FF0000;
+       font-size:28px 1em rgb(0,0,0);
+       margin:100px 50px 0px 50px;
+   }
+    footer {
+      background-color:#000000;
+      font-size:8px;
+      color:#FFFFFF;
+       margin:999px 0px 100px 0px;
+       text-align:center;
+       padding:8px;
+        
+    }
+</style>
+<script>
+
+function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
+}
+
+// 更新時間
+updateTime();
+setInterval(updateTime, 1000);
+</script>
+ <footer>
+   2024|youxiang版權所有|請勿盜用|盜用必究
+ </footer>
+</body>
+</html>
